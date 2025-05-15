@@ -70,7 +70,7 @@ if (account === "abc" && password === "123") {
   alert("錯誤");
 }
 */
-
+/*
 //寫一段程式，使用者輸入月份數字（1~12），用 switch 顯示該月份是春夏秋冬哪一季。
 month = parseInt(prompt("請輸入月份數字"));
 
@@ -102,3 +102,11 @@ if (month < 1 || month > 12) {
       break;
   }
 }
+*/
+
+//使用 for 迴圈將 1~100 加總
+let sum = 0;
+for (let i = 1; i <= 100; i++) {
+  sum += i;
+}
+console.log("1~100總合為" + sum);
