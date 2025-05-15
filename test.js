@@ -60,7 +60,7 @@ console.log(result);
 */
 
 //撰寫一段登入驗證程式，輸入帳號與密碼，若正確顯示「歡迎回來」，否則顯示錯誤。
-
+/*
 let account = prompt("帳號");
 let password = prompt("密碼");
 
@@ -68,4 +68,37 @@ if (account === "abc" && password === "123") {
   alert("歡迎回來");
 } else {
   alert("錯誤");
+}
+*/
+
+//寫一段程式，使用者輸入月份數字（1~12），用 switch 顯示該月份是春夏秋冬哪一季。
+month = parseInt(prompt("請輸入月份數字"));
+
+if (month < 1 || month > 12) {
+  alert("錯誤");
+} else {
+  switch (month) {
+    case 1:
+    case 2:
+      alert("冬");
+      break;
+    case 3:
+    case 4:
+    case 5:
+      alert("春");
+      break;
+    case 6:
+    case 7:
+    case 8:
+      alert("夏");
+      break;
+    case 9:
+    case 10:
+    case 11:
+      alert("秋");
+      break;
+    case 12:
+      alert("冬");
+      break;
+  }
 }
