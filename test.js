@@ -51,9 +51,21 @@ switch (num) {
     alert("請輸入有效數字！");
 }
 */
-
+/*
 //用三元運算子顯示使用者分數是否及格。
 
 let score = 59;
 let result = score >= 60 ? "及格" : "不及格";
 console.log(result);
+*/
+
+//撰寫一段登入驗證程式，輸入帳號與密碼，若正確顯示「歡迎回來」，否則顯示錯誤。
+
+let account = prompt("帳號");
+let password = prompt("密碼");
+
+if (account === "abc" && password === "123") {
+  alert("歡迎回來");
+} else {
+  alert("錯誤");
+}
