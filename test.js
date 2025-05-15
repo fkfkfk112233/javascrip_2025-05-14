@@ -32,7 +32,7 @@ if (isNaN(age)) {
   alert("成年");
 }
 */
-
+/*
 //使用 switch 撰寫一個功能選單（輸入 1～3 執行不同功能）。
 
 let num = prompt("請輸入1~3");
@@ -50,3 +50,10 @@ switch (num) {
   default:
     alert("請輸入有效數字！");
 }
+*/
+
+//用三元運算子顯示使用者分數是否及格。
+
+let score = 59;
+let result = score >= 60 ? "及格" : "不及格";
+console.log(result);
