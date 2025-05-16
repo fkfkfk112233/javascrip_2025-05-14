@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selector 共用範例結構</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="main-header">
+    <h1>網站標題</h1>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#" class="nav-item active">首頁</a></li>
+        <li><a href="#" class="nav-item">服務</a></li>
+        <li><a href="#" class="nav-item">關於我們</a></li>
+        <li><a href="#" class="nav-item disabled" aria-disabled="true">聯絡</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>歡迎詞</h2>
+      <p class="highlight">這是一段 <strong>重要</strong> 的歡迎詞。</p>
+    </section>
+
+    <section class="card-container">
+      <div class="card" data-type="info">
+        <h3 class="card-title">卡片一</h3>
+        <p>這是第一張卡片。</p>
+      </div>
+      <div class="card" data-type="warning">
+        <h3 class="card-title">卡片二</h3>
+        <p>這是第二張卡片。</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <form>
+        <label for="username">使用者名稱</label>
+        <input type="text" id="username" name="username">
+
+        <label>
+          <input type="checkbox" name="subscribe" checked>
+          訂閱電子報
+        </label>
+
+        <button type="submit" class="btn primary">送出</button>
+        <button type="button" class="btn danger" disabled>刪除</button>
+      </form>
+    </section>
+
+    <section class="list-demo">
+      <ul class="items">
+        <li>項目一</li>
+        <li class="highlight">項目二</li>
+        <li>項目三</li>
+        <li class="disabled">項目四</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Css lalala</p>
+  </footer>
+</body>
+</html>

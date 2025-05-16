@@ -110,3 +110,4 @@ for (let i = 1; i <= 100; i++) {
   sum += i;
 }
 console.log("1~100總合為" + sum);
+document.write("1~100總合為" + sum)
