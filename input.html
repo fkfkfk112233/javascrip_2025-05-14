@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 表單元素介紹（含 HTML5）</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      line-height: 1.6;
+    }
+    form {
+      margin-top: 1em;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+    }
+    input, select, textarea, button, datalist {
+      margin-top: 0.5em;
+      width: 300px;
+      max-width: 100%;
+      padding: 0.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML 表單元素介紹（含 HTML5）</h1>
+  <p>本頁示範各種表單輸入元素，包括 HTML5 新增功能。</p>
+
+  <form action="https://demo2505.contractors.com.tw/form-handler.php" method="post" enctype="multipart/form-data">
+
+    <label for="text">文字輸入（Text）</label>
+    <input type="text" id="text" name="text" placeholder="請輸入文字">
+
+    <label for="email">電子郵件（Email）</label>
+    <input type="email" id="email" name="email" placeholder="請輸入Email" required>
+
+    <label for="number">數字輸入（Number）</label>
+    <input type="number" id="number" name="number" min="1" max="100" placeholder="1~100">
+
+    <label for="url">網址輸入（URL）</label>
+    <input type="url" id="url" name="url" placeholder="https://example.com">
+
+    <label for="tel">電話號碼（Tel）</label>
+    <input type="tel" id="tel" name="tel" placeholder="0912-345-678">
+
+    <label for="date">日期選擇（Date）</label>
+    <input type="date" id="date" name="date">
+
+    <label for="color">顏色選擇（Color）</label>
+    <input type="color" id="color" name="color">
+
+    <label for="range">數值範圍滑桿（Range）</label>
+    <input type="range" id="range" name="range" min="0" max="10">
+
+    <label for="datalist">可輸入＋建議列表（Datalist）</label>
+    <input list="languages" id="datalist" name="language" placeholder="輸入程式語言">
+    <datalist id="languages">
+      <option value="HTML">
+      <option value="CSS">
+      <option value="JavaScript">
+      <option value="Python">
+      <option value="PHP">
+    </datalist>
+
+    <label for="file">檔案上傳（File）</label>
+    <input type="file" id="file" name="file">
+
+    <label>同意條款（Checkbox）</label>
+    <input type="checkbox" id="agree" name="agree" required>
+    <label for="agree">我已閱讀並同意條款</label>
+
+    <br><br>
+    <button type="submit">送出</button>
+    <button type="reset">重設</button>
+
+  </form>
+
+</body>
+</html>
