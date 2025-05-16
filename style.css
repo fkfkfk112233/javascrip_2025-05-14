@@ -1,0 +1,71 @@
+h1 {
+    font-size: 4em !important;
+}
+.color-red{
+    color:#f00;
+}
+.color-blue{
+    color:blue;
+}
+
+#main-title{
+    border: 4px darkblue dashed;
+}
+
+.card{
+    width:300px;
+    border: 2px solid gray;
+}
+
+.card .card-title{
+    background-color:aquamarine;
+    color:chocolate;
+    font-size: 1.5em;
+    margin-top:0;
+}
+.main-nav > ul {
+    list-style: none;
+}
+
+ul.hmenu{
+    display: flex;
+    list-style: none;
+    padding:0;
+    margin:0;
+    gap:1em;
+    background-color: brown;
+}
+ul.hmenu li{
+    display: inline-block;
+    width:120px;
+    text-align: center;
+    background-color: brown;
+    position: relative;
+}
+
+ul.hmenu li > a {
+    color: #fff;
+    text-decoration: none;
+}
+ul.hmenu li:hover{
+    background-color:bisque;
+}
+ul.hmenu li:hover > a{
+    color:black;
+}
+
+li > ul.submenu{
+    display:none;
+    background-color: cadetblue;
+    position: absolute;
+}
+
+ul.hmenu li:hover > ul.submenu{
+    display:block;
+    background-color: cadetblue;
+    padding: 0;
+}
+
+li > ul.submenu > li{
+    background-color: cadetblue;
+}
