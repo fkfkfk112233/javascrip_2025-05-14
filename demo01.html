@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+    * {
+        box-sizing: border-box;
+        font-family: "Noto Sans TC", sans-serif;
+    }
+
+    html.body {
+        height: 100%;
+        margin: 0;
+        font-family: ;
+        background-color: #f5f5f5;
+    }
+
+    .page_wrapper{
+        display: flex;
+        flex-direction: column;
+        min-height: 100wh;
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: space-between;/*左右對齊*/
+        align-items: center;
+        padding: 16px 20px;
+        position: relative;
+    }
+
+    .logo{
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    /*桌機板選項外觀*/
+    .nav.desktop_menu{
+        display: flex;
+        gap: 20px;/*選項單間距*/
+    }
+
+    .nav.desktop_menu a{
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    /*手機板選單*/
+    .menu_toggle{
+        display: none;
+    }
+
+    .humberger{
+        display: none;
+        width: 30px;
+        height: 30px;
+        flex-direction: column;
+        justify-content: space-between;/*平均分布三條線*/
+        cursor: pointer;
+    }
+
+    .humberger span{
+        display: block;
+        height: 4px;
+        background-color: white;
+        border-radius: 2px;
+        margin: 3px; 
+    }
+
+    .mobile_menu{
+        display: flex;
+        position: fixed;/*固定在視窗的位置*/
+        top: 0;
+        left: -240px;/*初始位置在畫面外*/
+        width: 240px;
+        height: 100%;
+        background-color: rgb(170, 170, 115);
+        padding: 80px 20px 20px;
+        gap: 20px;
+        transition: left 0.3 ease;
+        z-index: 1000;/*確保在其他元素上*/
+    }
+
+    /*關閉按鈕開關*/
+    .close_menu{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    /**/
+    .menu_overlay{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba( 0, 0, 0, 0.5);/*設定透明度*/
+        z-index: 900;
+        cursor: pointer;
+    }
+
+    /*設計手機板選單模式*/
+    .mobile_menu{
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: 500;
+        display: block;
+        padding: 10px;
+    }
+
+    /**/
+    #menu_checkbox:checked ~ .mobile_menu{
+        left: 0;
+    }
+
+    /*顯示遮罩*/
+    #menu_checkbox:checked ~ .menu_overlay{
+        display: block;
+    }
+
+    #menu_checkbox:checked header.humberger{
+    }
+
+    .main_container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        gap: 1em;
+        padding: 1em;
+        flex-grow: 1;
+    }
+
+    .col{
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+    .left{
+
+    }
+
+    .center{
+
+    }
+
+    .right{
+
+    }
+
+    footer{
+        background-color: #333;
+        color: white;
+        padding: 16px; ;
+        text-align: center;
+
+    }
+
+    @media (max-width :760px) {
+        .main_container{
+            flex-direction: column;
+            padding: 12px;
+            
+        }
+
+        .nav.desktop_menu{
+            display: none;
+        }    
+        
+        .humberger{
+            display: block;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <!--手機板漢堡選單生成元素-->
+    <input type="checkbox" id="menu_checkbox" class="menu_toggle" hidden />
+    <!--手機板選單出現時的背景遮罩-->
+    <div class="menu_overlay"></div>
+
+    <!--頁面容器-->
+    <div class="page_wrapper">
+        <header>
+            <div class="logo">Javasript class</div>
+            <nav class="nav desktop_menu">
+                <a href="#">首頁</a>
+                <a href="#">關於</a>
+                <a href="#">服務</a>
+                <a href="#">聯絡</a>
+            </nav>
+        
+            <!--生成漢堡選單-->
+            <label for="menu_checkbox" class="humberger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>    
+        </header>
+    
+        <!--主頁面容器-->
+        <div class="main_container">
+            <article class="col left">左側欄</article>
+            <main class="col center">中間欄</main>
+            <article class="col right">右側欄</article>
+        </div>
+    
+        <footer>
+            <p>&copy; 2025 Javasript class. All rights reserved.</p>
+        </footer>
+
+    <!--手機板選單抽屜-->
+    <nav class="mobile_menu">
+        <label for="menu_checkbox" class="close_menu">&times;</label>
+        <a href="#">首頁</a>
+        <a href="#">關於</a>
+        <a href="#">服務</a>
+        <a href="#">聯絡</a>
+    </nav>
+
+    <!---->
+    <label for="menu_checkbox" class="menu_overlay"></label>
+</body> 
+</html>
